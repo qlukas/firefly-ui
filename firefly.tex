@@ -23,11 +23,36 @@ control system.
 \end{abstract}
 \section{Vision: Firefly as a Biological Function Generator and Oscilliscope}
 \subsection{Region Selection}
+Each region will be contained within the current field of view. 
+There will be three ways to define regions:
+\begin{itemize}
+ \item Choose a preset region.
+ \item Define a custom region by clicking on the current field of view.
+ \item Use a segmentation algorithm to generate regions.
+\end{itemize}
 \subsubsection{Preset Regions and Patterns}
-\subsubsection{User Defined Regions}
-\subsubsection{Algorithmically Defined Regions}
+Preset regions will include the full field of view and user generated masks.
+\subsubsection{User-Defined and Algorithmically-Segmented Regions}
+The user will either click on the field of view to select a region or run a 
+segmentation algorithm. The user will be able to perform the following 
+operations on a region once it has been placed in a field of view:
+\begin{itemize}
+  \item Resize
+  \item Reshape
+  \item Drag around the field of view
+  \item Delete
+\end{itemize}
 \subsubsection{Regions as Sources and Probes}
+Each region abstractly represents a part of a circuit accessible to a signal
+generator or oscilliscope probe. A user designates a region as a Stimulus Region,
+Record Region, or both.
 \subsection{Stimulus Pattern Generation}
+For each region designated as a Stimulus Region, the user can specify a pattern
+of stimulation. The user specifies stimulus patterns by selecting among
+pre-defined stimulus waveforms.
 \subsection{Electrical Waveform Monitor}
+For each region designated as a Record Region, the user can specify an algorithm
+for live analysis and monitoring. The user specifies the monitor algorithm by 
+selecting among pre-defined options.
 \section{Implementation: Firefly Parameter Space and Experimental Configuration}
 \end{document}

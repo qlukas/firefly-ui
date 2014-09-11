@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.9.10)  10 SEP 2014 20:34
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.9.10)  10 SEP 2014 21:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -46,16 +46,27 @@ Overfull \hbox (61.64961pt too wide) in paragraph at lines 7--7
  [][] 
  []
 
-[1
 
-] (./firefly.aux) ) 
+Overfull \hbox (7.8658pt too wide) in paragraph at lines 24--24
+[]\OT1/cmr/bx/n/17.28 Vision: Fire-fly as a Bi-o-log-i-cal Func-tion Gen-
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 29.
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 29.
+ [1
+
+] [2] (./firefly.aux) ) 
 Here is how much of TeX's memory you used:
- 219 strings out of 495029
- 2392 string characters out of 6181523
+ 237 strings out of 495029
+ 2699 string characters out of 6181523
  50046 words of memory out of 5000000
- 3511 multiletter control sequences out of 15000+600000
- 6978 words of font info for 25 fonts, out of 8000000 for 9000
+ 3526 multiletter control sequences out of 15000+600000
+ 7235 words of font info for 26 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 22i,6n,19p,156b,199s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 22i,6n,19p,167b,199s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on firefly.dvi (1 page, 2320 bytes).
+Output written on firefly.dvi (2 pages, 4252 bytes).
