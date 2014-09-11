@@ -1,6 +1,6 @@
 \documentclass[a4paper,12pt]{article}
 \begin{document}
-\title{Firefly v2 Software Specification}
+\title{Firefly UI Software Specification}
 \author{Lukas Gemar, Paul Wells, Graham Dempsey, Kit Werley, Adam Cohen\\
 		Q-state Biosciences}
 \date{September 10, 2014}
@@ -8,20 +8,20 @@
 
 \begin{abstract}
 This document's purpose is to serve as a meeting place for discussion of
-the second version of the Firefly's user interface. The specification here
+the second version of the Firefly's user interface (UI). The specification here
 should separate itself from the hardware implementation of the microscope
 and tie itself more closely to the user experience. The user thinks in terms
 stimulus patterns, cells, and their electrical waveforms, so the initial 
 discussion will involve an abstract specification of the experimental configuration 
-that allows the user to experience the Firefly as a biological oscilliscope 
+that allows the user to experience the Firefly as a biological oscilloscope 
 and function generator. The second part of the document will include a more 
 in depth exploration of the parameter space and investigate how to 
 abstractly and concretely represent the configuration of a particular 
-experiment. The conclusions drawn here will shape the both the user 
+experiment. The conclusions drawn here will shape both the user 
 experience and how the front-end interface interacts with the underlying 
 control system.
 \end{abstract}
-\section{Vision: Firefly as a Biological Function Generator and Oscilliscope}
+\section{Paradigm: Firefly as a Biological Function Generator and Oscilloscope}
 \subsection{Region Selection}
 Each region will be contained within the current field of view. 
 There will be three ways to define regions:
@@ -44,15 +44,81 @@ operations on a region once it has been placed in a field of view:
 \end{itemize}
 \subsubsection{Regions as Sources and Probes}
 Each region abstractly represents a part of a circuit accessible to a signal
-generator or oscilliscope probe. A user designates a region as a Stimulus Region,
+generator or oscilloscope probe. A user designates a region as a Stimulus Region,
 Record Region, or both.
 \subsection{Stimulus Pattern Generation}
 For each region designated as a Stimulus Region, the user can specify a pattern
 of stimulation. The user specifies stimulus patterns by selecting among
-pre-defined stimulus waveforms.
+predefined stimulus waveforms.
 \subsection{Electrical Waveform Monitor}
 For each region designated as a Record Region, the user can specify an algorithm
 for live analysis and monitoring. The user specifies the monitor algorithm by 
-selecting among pre-defined options.
-\section{Implementation: Firefly Parameter Space and Experimental Configuration}
+selecting among predefined options.
+\section{Implementation: Firefly UI Parameter Space and Experimental Configuration}
+\subsection{Sample Selection}
+A single plate may hold one or more samples. An index $i$ specifies which 
+sample is currently in view and $n$ is the number of samples.
+\subsubsection{Plate Geometry}
+The user will select the plate geometry, specifying the number of samples $n$.
+\subsubsection{Automation}
+The user or an automated program can select sample $i$ for viewing.
+\subsection{Field of View Selection}
+Once a sample is selected, the position of the field of view within the sample
+is specified by an $(x,y,z)$ coordinate.
+\subsection{Spatial Pattern Generation}
+These spatial patterns are analogous to the "regions" described in the Paradigm
+section above.
+\subsubsection{Statically Built Patterns}
+These are two dimensional masks in the coordinate space of the camera. The 
+simplest such pattern will be the full field of view of the camera. The user
+will have the option of uploading the masks in camera or DMD coordinates, but 
+the internal representation will be in camera coordinates and the user will
+visualize these spatial patterns overlaid on the current field of view.
+\subsubsection{Dynamically Built Patterns}
+These are patterns specified by clicking around a region or a segmentation 
+algorithm at run-time. Each of these dynamically selected patterns can be 
+manipulated in the following ways:
+\begin{itemize}
+  \item Resize
+  \item Reshape
+  \item Drag around the field of view
+  \item Delete
+\end{itemize}
+\subsection{Temporal Pattern Generation}
+\subsubsection{Static Patterns}
+Static patterns are created by a user before run-time of the program.
+\paragraph{Pattern Upload}
+A user will upload a pattern in a standard format such as a text file.
+The user will also give the pattern a name at this time for easy 
+reference later.
+\paragraph{Pattern Visualization}
+After a user uploads the pattern, there will be an interface for viewing
+the uploaded waveform to determine that the waveform is correct.
+\subsubsection{Dynamic Patterns}
+A user will create some temporal patterns in real time. These patterns
+are generated by user input: toggling a switch on and off to create a 
+digital waveform in real time or entering a float in a text box to change
+an analog value.
+\subsection{Device / Monitor Panel}
+There will be a panel onto which a user can drag and drop Devices and Monitors. 
+The panel will then show a configuration window for each Device and Monitor.
+\subsubsection{Devices}
+Each device will have a name, set of parameters, and input channels. This
+will allow for the addition of new wavelengths, filters, etc.
+\subsubsection{Monitors}
+Each monitor is specified by the algorithm it applies the stream
+of data that arrives on its input channel. Monitors will implement analysis
+algorithms for generating real-time data visualizations.
+\subsection{I/O Configuration}
+\subsubsection{Mapping Output Channels to Devices}
+The user will create a mapping between control channels to Device
+input channels.
+\subsubsection{Mapping Input Channels to Monitors}
+The user will create a mapping between sampling channels and Monitor
+input channels.
+\subsubsection{Mapping Input and Output Channels to Temporal Patterns}
+The user will have the freedom to create arbitrary mappings between
+control and sampling channels and temporal waveforms. This will accommodate
+temporal control of new pieces of hardware and sampling of new kinds
+of data from detectors.
 \end{document}

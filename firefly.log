@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.9.10)  10 SEP 2014 21:26
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.10)  11 SEP 2014 01:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -46,11 +46,6 @@ Overfull \hbox (61.64961pt too wide) in paragraph at lines 7--7
  [][] 
  []
 
-
-Overfull \hbox (7.8658pt too wide) in paragraph at lines 24--24
-[]\OT1/cmr/bx/n/17.28 Vision: Fire-fly as a Bi-o-log-i-cal Func-tion Gen-
- []
-
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 29.
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
@@ -59,14 +54,43 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 29.
  [1
 
-] [2] (./firefly.aux) ) 
-Here is how much of TeX's memory you used:
- 237 strings out of 495029
- 2699 string characters out of 6181523
- 50046 words of memory out of 5000000
- 3526 multiletter control sequences out of 15000+600000
- 7235 words of font info for 26 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
- 22i,6n,19p,167b,199s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (14.6577pt too wide) in paragraph at lines 57--57
+[]\OT1/cmr/bx/n/17.28 Implementation: Fire-fly UI Pa-ram-e-ter Space
+ []
 
-Output written on firefly.dvi (2 pages, 4252 bytes).
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 59.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 59.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 59.
+[2]
+Overfull \hbox (9.39586pt too wide) in paragraph at lines 69--71
+\OT1/cmr/m/n/12 These spa-tial pat-terns are anal-o-gous to the "re-gions" de-s
+cribed in the Paradigm
+ []
+
+[3] [4] [5] (./firefly.aux) ) 
+Here is how much of TeX's memory you used:
+ 254 strings out of 495028
+ 2877 string characters out of 6181497
+ 50049 words of memory out of 5000000
+ 3536 multiletter control sequences out of 15000+600000
+ 9416 words of font info for 33 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 22i,6n,19p,170b,199s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on firefly.pdf (5 pages, 95808 bytes).
+PDF statistics:
+ 48 PDF objects out of 1000 (max. 8388607)
+ 33 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+
